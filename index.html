@@ -27,8 +27,8 @@
             for (let i = 1; i<=Number(num3.value); i++) {
                 g = g * (1 + (Number(num2.value)/100));
             }
-            let r = g.toFixed(2);
-             Math.floor(result.innerText = r);
+            let r = g;
+            result.innerText = `${r.toFixed(2)}(${(Number(r)/Number(num.value)).toFixed(4)})배`;
         }
     </script>
 
