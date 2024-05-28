@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>제곱 계산기</h1>
+    <label><input type="text" id="num" style="width: 50px;">을</label><br>
+    <label><input type="text" id="num2" style="width: 50px;">% 만큼</label><br>
+    <label><input type="text" id="num3" style="width: 50px;">번 곱할까요?</label><br>
+    <button id="check">확인</button><br>
+    <div id="result"></div>
+    <script>
+        let num = document.getElementById('num');
+        let num2 = document.getElementById('num2');
+        let num3 = document.getElementById('num3');
+        let result = document.getElementById('result');
+        const check = document.getElementById('check');
+        
+        check.addEventListener('click', gop_);
+
+        
+        function gop_() {
+            let g = Number(num.value);
+            for (let i = 1; i<=Number(num3.value); i++) {
+                g = g * (1 + (Number(num2.value)/100));
+            }
+            let r = g.toFixed(2);
+             Math.floor(result.innerText = r);
+        }
+    </script>
+
+
+</body>
+</html>
